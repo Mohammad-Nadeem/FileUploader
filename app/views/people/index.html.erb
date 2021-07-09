@@ -4,9 +4,26 @@
 	<title>CSV Uploader</title>
 </head>
 <body>
-	<h3>Please Upload a CSV file which have these columns first_name, last_name, email and phone</h3>
-	
-<%= form_tag upload_csv_path do %>
+	<table style="width:100%">
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+    <th>Phone</th>
+  </tr>
+
+  <% @people.each do |person| %>
+   <tr>
+    <td><%= person.first_name%> </td>
+    <td> <%= person.last_name%> </td>
+    <td><%= person.email%> </td>
+    <td><%= person.phone%> </td>
+  </tr>
+  <% end%>
+
+</table>
+<h3>Please Upload a CSV file which have these columns first_name, last_name, email and phone</h3>
+<%= form_tag upload_csv_path, multipart: true do %>
   <%= file_field_tag :csv %>
   <%= submit_tag 'Upload' %>
 <% end %>
