@@ -1,0 +1,2 @@
+$("#temporary_person").hide();
+$("#updated_temporary_person").html("<%= escape_javascript(render partial: 'temporary_person', locals: { failed_records: @failed_records } ) %>");

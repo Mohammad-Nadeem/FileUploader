@@ -1,0 +1,24 @@
+<table style="width:100%">
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Validation Errors</th>
+    <th>Action</th>
+  </tr>
+    
+  <% failed_records.each do |person| %>
+    <tr id= "<%= person.id %>">
+      <%= form_for person, url: resave_person_path, method: :patch, remote: true do |f|%>
+        <td><%= f.text_field :first_name, value: person.first_name %> </td>
+        <td> <%= f.text_field :last_name, value: person.last_name%> </td>
+        <td><%= f.text_field :email, value: person.email%> </td>
+        <td><%= f.text_field :phone, value: person.phone%> </td>
+        <td><%= person.validation_errors%> </td>
+        <td><%= hidden_field_tag :tid, person.id %></td>
+        <td><%= f.submit "Re-Save"%></td>
+      <%end%>
+    </tr>
+  <%end%>
+</table>

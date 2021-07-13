@@ -64,3 +64,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'mysql2'
 # Use Roo gem for CSV 
 gem "roo", "~> 2.8.0"
+gem 'jquery-rails'

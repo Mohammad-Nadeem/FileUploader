@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'people#index'
   post '/upload_csv', to: 'people#upload_csv'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  patch '/resave_person', to: 'people#resave_person'
 end
