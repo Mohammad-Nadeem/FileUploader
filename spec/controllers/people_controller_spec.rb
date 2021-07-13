@@ -1,3 +1,4 @@
+require "rails_helper"
 RSpec.describe PeopleController do
   describe "POST #upload_csv" do
     it "redirects to the home page" do
