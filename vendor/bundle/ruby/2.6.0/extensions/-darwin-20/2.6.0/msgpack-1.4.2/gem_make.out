@@ -1,0 +1,36 @@
+current directory: /Users/nadeem/FileUploader/vendor/bundle/ruby/2.6.0/gems/msgpack-1.4.2/ext/msgpack
+/Users/nadeem/.rbenv/versions/2.6.5/bin/ruby -I /Users/nadeem/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20210713-69590-k4l3bn.rb extconf.rb
+checking for ruby/st.h... yes
+checking for st.h... yes
+checking for rb_str_replace() in ruby.h... yes
+checking for rb_intern_str() in ruby.h... yes
+checking for rb_enc_interned_str() in ruby.h... no
+checking for rb_sym2str() in ruby.h... yes
+checking for rb_str_intern() in ruby.h... yes
+checking for rb_block_lambda() in ruby.h... yes
+checking for rb_hash_dup() in ruby.h... yes
+checking for rb_hash_clear() in ruby.h... yes
+creating Makefile
+
+current directory: /Users/nadeem/FileUploader/vendor/bundle/ruby/2.6.0/gems/msgpack-1.4.2/ext/msgpack
+make "DESTDIR=" clean
+
+current directory: /Users/nadeem/FileUploader/vendor/bundle/ruby/2.6.0/gems/msgpack-1.4.2/ext/msgpack
+make "DESTDIR="
+compiling buffer.c
+compiling buffer_class.c
+compiling extension_value_class.c
+compiling factory_class.c
+compiling packer.c
+compiling packer_class.c
+compiling packer_ext_registry.c
+compiling rbinit.c
+compiling rmem.c
+compiling unpacker.c
+compiling unpacker_class.c
+compiling unpacker_ext_registry.c
+linking shared-object msgpack/msgpack.bundle
+
+current directory: /Users/nadeem/FileUploader/vendor/bundle/ruby/2.6.0/gems/msgpack-1.4.2/ext/msgpack
+make "DESTDIR=" install
+/opt/homebrew/bin/ginstall -c -m 0755 msgpack.bundle ./.gem.20210713-69590-k5d5p6/msgpack

@@ -23,7 +23,6 @@
     <div id="temporary_person">
       <%= render partial: 'temporary_person', locals: { failed_records: @failed_records} %>
     </div>
-    <div id="updated_temporary_person"></div>
     <h3>Please Upload a CSV file which have these columns first_name, last_name, email and phone</h3>
     <%= form_tag upload_csv_path, multipart: true do %>
     <%= file_field_tag :csv, required: true %>

@@ -1,0 +1,514 @@
+have_func: checking for rb_absint_size()... -------------------- yes
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong     -lruby.2.6   "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong     -lruby.2.6   "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return 0;
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_absint_size; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_absint_singlebit_p()... -------------------- yes
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong     -lruby.2.6   "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return 0;
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_absint_singlebit_p; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_wait_for_single_fd()... -------------------- yes
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong     -lruby.2.6   "
+conftest.c:14:57: error: use of undeclared identifier 'rb_wait_for_single_fd'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_wait_for_single_fd; return !p; }
+                                                        ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return 0;
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_wait_for_single_fd; return !p; }
+/* end */
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong     -lruby.2.6   "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return 0;
+13: }
+14: extern void rb_wait_for_single_fd();
+15: int t(void) { rb_wait_for_single_fd(); return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for mysql.h... -------------------- yes
+
+"clang -E -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+/* end */
+
+--------------------
+
+have_header: checking for errmsg.h... -------------------- yes
+
+"clang -E -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <errmsg.h>
+/* end */
+
+--------------------
+
+have_const: checking for SSL_MODE_DISABLED in mysql.h... -------------------- yes
+
+"clang -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)SSL_MODE_DISABLED;
+/* end */
+
+--------------------
+
+have_const: checking for SSL_MODE_PREFERRED in mysql.h... -------------------- yes
+
+"clang -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)SSL_MODE_PREFERRED;
+/* end */
+
+--------------------
+
+have_const: checking for SSL_MODE_REQUIRED in mysql.h... -------------------- yes
+
+"clang -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)SSL_MODE_REQUIRED;
+/* end */
+
+--------------------
+
+have_const: checking for SSL_MODE_VERIFY_CA in mysql.h... -------------------- yes
+
+"clang -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)SSL_MODE_VERIFY_CA;
+/* end */
+
+--------------------
+
+have_const: checking for SSL_MODE_VERIFY_IDENTITY in mysql.h... -------------------- yes
+
+"clang -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)SSL_MODE_VERIFY_IDENTITY;
+/* end */
+
+--------------------
+
+have_struct_member: checking for MYSQL.net.vio in mysql.h... -------------------- yes
+
+"clang -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <mysql.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((MYSQL*)0)->net.vio - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return 0;
+10: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for MYSQL.net.pvio in mysql.h... -------------------- no
+
+"clang -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+conftest.c:6:35: error: no member named 'pvio' in 'struct NET'; did you mean 'vio'?
+int s = (char *)&((MYSQL*)0)->net.pvio - (char *)0;
+                                  ^~~~
+                                  vio
+/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql/mysql_com.h:880:13: note: 'vio' declared here
+  MYSQL_VIO vio;
+            ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <mysql.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((MYSQL*)0)->net.pvio - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return 0;
+10: }
+/* end */
+
+--------------------
+
+have_const: checking for MYSQL_ENABLE_CLEARTEXT_PLUGIN in mysql.h... -------------------- yes
+
+"clang -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)MYSQL_ENABLE_CLEARTEXT_PLUGIN;
+/* end */
+
+--------------------
+
+have_const: checking for SERVER_QUERY_NO_GOOD_INDEX_USED in mysql.h... -------------------- yes
+
+"clang -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)SERVER_QUERY_NO_GOOD_INDEX_USED;
+/* end */
+
+--------------------
+
+have_const: checking for SERVER_QUERY_NO_INDEX_USED in mysql.h... -------------------- yes
+
+"clang -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)SERVER_QUERY_NO_INDEX_USED;
+/* end */
+
+--------------------
+
+have_const: checking for SERVER_QUERY_WAS_SLOW in mysql.h... -------------------- yes
+
+"clang -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)SERVER_QUERY_WAS_SLOW;
+/* end */
+
+--------------------
+
+have_const: checking for MYSQL_OPTION_MULTI_STATEMENTS_ON in mysql.h... -------------------- yes
+
+"clang -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)MYSQL_OPTION_MULTI_STATEMENTS_ON;
+/* end */
+
+--------------------
+
+have_const: checking for MYSQL_OPTION_MULTI_STATEMENTS_OFF in mysql.h... -------------------- yes
+
+"clang -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)MYSQL_OPTION_MULTI_STATEMENTS_OFF;
+/* end */
+
+--------------------
+
+have_type: checking for my_bool in mysql.h... -------------------- no
+
+"clang -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+conftest.c:6:9: error: unknown type name 'my_bool'
+typedef my_bool conftest_type;
+        ^
+1 error generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef my_bool conftest_type;
+7: int conftestval[sizeof(conftest_type)?1:-1];
+/* end */
+
+--------------------
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong    -L/opt/homebrew/Cellar/mysql/8.0.23_1/lib -lmysqlclient   -lruby.2.6 -Werror -Weverything  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong    -L/opt/homebrew/Cellar/mysql/8.0.23_1/lib -lmysqlclient   -lruby.2.6 -Werror -Wno-bad-function-cast  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong    -L/opt/homebrew/Cellar/mysql/8.0.23_1/lib -lmysqlclient   -lruby.2.6 -Werror -Wno-conditional-uninitialized  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong    -L/opt/homebrew/Cellar/mysql/8.0.23_1/lib -lmysqlclient   -lruby.2.6 -Werror -Wno-covered-switch-default  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong    -L/opt/homebrew/Cellar/mysql/8.0.23_1/lib -lmysqlclient   -lruby.2.6 -Werror -Wno-declaration-after-statement  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong    -L/opt/homebrew/Cellar/mysql/8.0.23_1/lib -lmysqlclient   -lruby.2.6 -Werror -Wno-disabled-macro-expansion  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong    -L/opt/homebrew/Cellar/mysql/8.0.23_1/lib -lmysqlclient   -lruby.2.6 -Werror -Wno-documentation-unknown-command  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong    -L/opt/homebrew/Cellar/mysql/8.0.23_1/lib -lmysqlclient   -lruby.2.6 -Werror -Wno-missing-field-initializers  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong    -L/opt/homebrew/Cellar/mysql/8.0.23_1/lib -lmysqlclient   -lruby.2.6 -Werror -Wno-missing-variable-declarations  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong    -L/opt/homebrew/Cellar/mysql/8.0.23_1/lib -lmysqlclient   -lruby.2.6 -Werror -Wno-padded  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong    -L/opt/homebrew/Cellar/mysql/8.0.23_1/lib -lmysqlclient   -lruby.2.6 -Werror -Wno-reserved-id-macro  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong    -L/opt/homebrew/Cellar/mysql/8.0.23_1/lib -lmysqlclient   -lruby.2.6 -Werror -Wno-sign-conversion  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong    -L/opt/homebrew/Cellar/mysql/8.0.23_1/lib -lmysqlclient   -lruby.2.6 -Werror -Wno-static-in-inline  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong    -L/opt/homebrew/Cellar/mysql/8.0.23_1/lib -lmysqlclient   -lruby.2.6 -Werror -Wno-switch-enum  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong    -L/opt/homebrew/Cellar/mysql/8.0.23_1/lib -lmysqlclient   -lruby.2.6 -Werror -Wno-undef  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong    -L/opt/homebrew/Cellar/mysql/8.0.23_1/lib -lmysqlclient   -lruby.2.6 -Werror -Wno-unreachable-code  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong    -L/opt/homebrew/Cellar/mysql/8.0.23_1/lib -lmysqlclient   -lruby.2.6 -Werror -Wno-used-but-marked-unused  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"clang -o conftest -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/-darwin20 -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0/ruby/backward -I/Users/nadeem/.rbenv/versions/2.6.5/include/ruby-2.6.0 -I. -I/opt/homebrew/Cellar/mysql/8.0.23_1/include/mysql -I/Users/nadeem/.rbenv/versions/2.6.5/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -w -fno-common -pipe -DFULL_SSL_MODE_SUPPORT -Weverything -Wno-bad-function-cast -Wno-conditional-uninitialized -Wno-covered-switch-default -Wno-declaration-after-statement -Wno-disabled-macro-expansion -Wno-documentation-unknown-command -Wno-missing-field-initializers -Wno-missing-variable-declarations -Wno-padded -Wno-reserved-id-macro -Wno-sign-conversion -Wno-static-in-inline -Wno-switch-enum -Wno-undef -Wno-unreachable-code -Wno-used-but-marked-unused conftest.c  -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib -L. -L/Users/nadeem/.rbenv/versions/2.6.5/lib  -fstack-protector-strong    -L/opt/homebrew/Cellar/mysql/8.0.23_1/lib -lmysqlclient   -lruby.2.6  -Wl,-rpath,/opt/homebrew/Cellar/mysql/8.0.23_1/lib  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
